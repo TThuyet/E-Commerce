@@ -9,11 +9,11 @@ import {
   TextareaAutosize,
   Typography,
 } from "@mui/material";
-import React, { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../features/Redux/Store/store";
-import { TextareaAutosize as BaseTextareaAutosize } from "@mui/base/TextareaAutosize";
-import { styled } from "@mui/system";
+// import { TextareaAutosize as BaseTextareaAutosize } from "@mui/base/TextareaAutosize";
+// import { styled } from "@mui/system";
 import { useDispatch } from "react-redux";
 import { handlePostReview } from "../../../features/Redux/Reducers/reviewSlice";
 import { nanoid } from "@reduxjs/toolkit";
@@ -73,6 +73,8 @@ const Review = ({ idProduct }: IReviewProps) => {
     setDataReview(listReviewProductMerged);
   }, [listReview]);
   const handleRating = (event: any, newValue: any) => {
+    console.log(event);
+
     setError("");
     setRating(newValue);
   };

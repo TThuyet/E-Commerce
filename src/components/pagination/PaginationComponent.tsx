@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Pagination from "@mui/material/Pagination";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IProduct } from "../../types/Models";
 
 interface IPagination {
@@ -34,6 +34,8 @@ const PaginationComponent = ({
   }, [arr, currentPage, quantityPage]);
 
   const handleCurrentPage = (event: any, currentPage: number) => {
+    console.log(event);
+
     setCurrentPage(currentPage);
     window.scrollTo({
       top: 300,

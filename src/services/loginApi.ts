@@ -1,6 +1,4 @@
-import axios from "axios";
 import request from "../utils/ConfigAPI";
-import { PayloadAction } from "@reduxjs/toolkit";
 
 const loginAPI = {
   postLogin: async () => {

@@ -24,6 +24,7 @@ const pucharseSlice = createSlice({
     },
     handlePostPucharse: (state, action: PayloadAction<any>) => {
       state.loading = true;
+      console.log(action.payload);
     },
     handleGetPucharseSuccess: (state, action: PayloadAction<any>) => {
       state.loading = false;

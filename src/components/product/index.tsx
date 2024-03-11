@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import { IProduct } from "../../types/Models";
 import styles from "./product.module.css";
 import { Box, Card, CardContent, Grid } from "@mui/material";

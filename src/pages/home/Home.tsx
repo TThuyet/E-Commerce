@@ -10,17 +10,16 @@ import Collection from "./Collection";
 import { Fragment } from "react";
 import { settingSlideHeader } from "../../constants/SettingSlideHeader";
 import ListProductComponent from "./ListProduct";
-import Footer from "../../components/footer/Footer";
 import { slideImages } from "../../assets/sildeImage";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 import { divStyle } from "./StyleComponent";
-import HeaderTab from "../../components/Header/HeaderTab";
-import styles from "./Home.module.css";
+// import HeaderTab from "../../components/Header/HeaderTab";
+// import styles from "./Home.module.css";
 const Home = () => {
-  const cart = useSelector(
-    (state: RootState) => state.reducer.cartSlice.listProductCart
-  );
+  // const cart = useSelector(
+  //   (state: RootState) => state.reducer.cartSlice.listProductCart
+  // );
   const listProduct = useSelector(
     (state: RootState) => state.reducer.productSlice.listProduct
   );

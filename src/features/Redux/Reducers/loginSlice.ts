@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ICategory, IUserLogin } from "../../../types/Models";
+import { IUserLogin } from "../../../types/Models";
 
 interface InitialState {
   loading: boolean;

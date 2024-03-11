@@ -4,8 +4,6 @@ import {
   Chip,
   FormControlLabel,
   FormGroup,
-  Grid,
-  Paper,
   Slider,
   Typography,
 } from "@mui/material";
@@ -47,6 +45,8 @@ const FilterProductComponent = ({
   const allSizeProduct = sizeFilterArray(listProductShop);
 
   const handleChange = (event: Event, newValue: number | number[]) => {
+    console.log(event);
+
     setValue(newValue as number[]);
   };
 

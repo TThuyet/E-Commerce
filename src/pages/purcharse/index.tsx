@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { AnyIfEmpty, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { RootState } from "../../features/Redux/Store/store";
 import {
   Box,
-  Divider,
+  // Divider,
   Grid,
   Paper,
   Stack,
@@ -11,8 +11,8 @@ import {
   TableBody,
   TableCell,
   TableContainer,
-  TableFooter,
-  TablePagination,
+  // TableFooter,
+  // TablePagination,
   TableRow,
   Typography,
 } from "@mui/material";
@@ -44,7 +44,7 @@ const index = () => {
   }, [listPucharse]);
   useEffect(() => {
     const res = listPucharseByUser.map((pucharse) => {
-      let newList;
+      // let newList: any;
       const productsNewOrder = pucharse.productsOrder.map((item) => {
         let newItem;
         listProduct.forEach((product) => {
@@ -58,7 +58,7 @@ const index = () => {
         });
         return newItem;
       });
-      return (newList = { ...pucharse, productsOrder: productsNewOrder });
+      return { ...pucharse, productsOrder: productsNewOrder };
     });
 
     const listNewPucharse: any = [...res];

@@ -1,4 +1,3 @@
-import React from "react";
 import { IProduct } from "../../../types/Models";
 import { Box, Grid, Rating, Typography } from "@mui/material";
 import ProductItemComponent from "../../product";

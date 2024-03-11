@@ -1,17 +1,16 @@
 import * as React from "react";
 
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import { useEffect, useState } from "react";
+// import Drawer from "@mui/material/Drawer";
+// import List from "@mui/material/List";
+// import ListItem from "@mui/material/ListItem";
+// import ListItemText from "@mui/material/ListItemText";
+import { useState } from "react";
 
 import styles from "./Login.module.css";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+// import TextField from "@mui/material/TextField";
 import {
   Button,
-  Divider,
   IconButton,
   InputAdornment,
   InputLabel,
@@ -25,7 +24,6 @@ import { useDispatch } from "react-redux";
 import {
   handleGetUser,
   handlegetCloseLogin,
-  handlegetOpenLogin,
 } from "../../features/Redux/Reducers/loginSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../../features/Redux/Store/store";
@@ -90,9 +88,9 @@ export default function index() {
     (state: RootState) => state.reducer.loginSlice.open
   );
 
-  const listPurchase = useSelector(
-    (state: RootState) => state.reducer.pucharseSlice.listPucharse
-  );
+  // const listPurchase = useSelector(
+  //   (state: RootState) => state.reducer.pucharseSlice.listPucharse
+  // );
 
   var userLogin: any;
   const handleSubmit = (event: any) => {

@@ -22,6 +22,7 @@ const reviewSlice = createSlice({
     },
     handlePostReview: (state, action: PayloadAction<any>) => {
       state.loading = true;
+      console.log(action.payload);
     },
     handleGetReviewSuccess: (state, action: PayloadAction<any>) => {
       state.loading = false;

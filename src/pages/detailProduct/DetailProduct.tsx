@@ -18,13 +18,13 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ProductItemContext } from "../../components/product";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "../detailProduct/detailProduct.module.css";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { IoMdHome } from "react-icons/io";
-import { FaShoppingBag } from "react-icons/fa";
-import { FaRegUser, FaSearch } from "react-icons/fa";
+// import { IoMdHome } from "react-icons/io";
+// import { FaShoppingBag } from "react-icons/fa";
+// import { FaRegUser, FaSearch } from "react-icons/fa";
 import Review from "./components/Review";
 import RelatedProduct from "./components/RelatedProduct";
 
@@ -42,9 +42,7 @@ import { Colors } from "../../constants/Color";
 import { IProductCart } from "../../types/Models";
 import { useDispatch } from "react-redux";
 import { handleAddToCart } from "../../features/Redux/Reducers/cartSlice";
-import HeaderTab from "../../components/Header/HeaderTab";
 import "../detailProduct/detailProduct.module.css";
-import Footer from "../../components/footer/Footer";
 import ScrollToTop from "../../components/ScrollOnTop";
 import ShoppingCart from "../../components/shoppingCart";
 type ColorType = keyof typeof Colors;
@@ -92,7 +90,7 @@ const DetailProduct = () => {
     nextArrow: <NextArrow />,
   };
   const dispatch = useDispatch();
-  const params = useParams();
+  // const params = useParams();
   const location = useLocation();
   console.log(location.state);
   const [dataProductaddCart, setDataProductaddCart] = useState<IProductCart>({

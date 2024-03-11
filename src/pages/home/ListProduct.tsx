@@ -1,4 +1,3 @@
-import React from "react";
 import { Box } from "@mui/material";
 import { IListProduct, IProduct } from "../../types/Models";
 import Slider from "react-slick";

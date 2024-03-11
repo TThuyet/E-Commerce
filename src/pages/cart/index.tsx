@@ -25,7 +25,6 @@ import {
   handleReduceQuantity,
 } from "../../features/Redux/Reducers/cartSlice";
 import { useDispatch } from "react-redux";
-import HeaderTab from "../../components/Header/HeaderTab";
 import styles from "./Cart.module.css";
 import { IProductCart } from "../../types/Models";
 import { useNavigate } from "react-router-dom";

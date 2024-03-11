@@ -1,4 +1,3 @@
-import React from "react";
 import { IProduct } from "../../../types/Models";
 import { Box, Rating, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";

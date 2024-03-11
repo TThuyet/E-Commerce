@@ -8,7 +8,6 @@ import {
   Paper,
   Radio,
   RadioGroup,
-  Stack,
   Table,
   TableBody,
   TableCell,
@@ -24,10 +23,10 @@ import {
   Form,
   Formik,
   FormikHelpers,
-  FormikProps,
-  FormikValues,
+  // FormikProps,
+  // FormikValues,
 } from "formik";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Checkout.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -39,7 +38,7 @@ import {
 import { RootState } from "../../features/Redux/Store/store";
 import { IProductCart } from "../../types/Models";
 import NavShop from "../../components/navShop";
-import HeaderTab from "../../components/Header/HeaderTab";
+// import HeaderTab from "../../components/Header/HeaderTab";
 import { getDay } from "../detailProduct/components/Review";
 import { handlePostPucharse } from "../../features/Redux/Reducers/pucharseSlice";
 import { handlegetOpenLogin } from "../../features/Redux/Reducers/loginSlice";
@@ -152,9 +151,9 @@ const Checkout = () => {
   const userLogin = useSelector(
     (state: RootState) => state.reducer.loginSlice.user
   );
-  const listCart = useSelector(
-    (state: RootState) => state.reducer.cartSlice.listProductCart
-  );
+  // const listCart = useSelector(
+  //   (state: RootState) => state.reducer.cartSlice.listProductCart
+  // );
 
   const arr = newCart.map((item: any) => {
     let data: IOD = {
@@ -267,7 +266,7 @@ const Checkout = () => {
               validate={validate}
               onSubmit={handleSubmit}
             >
-              {(formikProps: FormikProps<DetailForm>) => (
+              {() => (
                 <Form>
                   <Grid container spacing={3}>
                     {/* FirstName */}

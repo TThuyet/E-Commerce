@@ -16,7 +16,7 @@ export interface IShoppingCartProps {
 }
 
 const ShoppingCart: React.FC<IShoppingCartProps> = ({
-  products,
+  // products,
   isOpen,
   onClose,
 }) => {

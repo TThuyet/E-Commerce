@@ -1,10 +1,9 @@
 import { Box } from "@mui/material";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import ListProductShop from "../../components/listproductshop";
 import { useLocation } from "react-router-dom";
 import { RootState } from "../../features/Redux/Store/store";
 import { useSelector } from "react-redux";
-import HeaderTab from "../../components/Header/HeaderTab";
 import ListCategory from "../../components/listCategory/ListCategory";
 
 const CategoryProduct = () => {

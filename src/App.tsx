@@ -1,12 +1,12 @@
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Routes,
   Route,
-  BrowserRouter,
+  // BrowserRouter,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Shop from "./pages/shop/Shop";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { handleProductsFetchRequest } from "./features/Redux/Reducers/productSlice";
 import "./App.css";
@@ -18,12 +18,8 @@ import { handleGetReview } from "./features/Redux/Reducers/reviewSlice";
 import { handleGetPucharse } from "./features/Redux/Reducers/pucharseSlice";
 import Pucharse from "./pages/purcharse";
 import Checkout from "./pages/checkout";
-import OrderComplete from "./pages/orderComplete";
-import { RootState } from "./features/Redux/Store/store";
 import { handleGetDataLocalStorage } from "./features/Redux/Reducers/cartSlice";
 import CategoryProduct from "./pages/categoryProduct/CategoryProduct";
-import { ToastContainer } from "react-toastify";
-import ScrollToTop from "./components/ScrollOnTop";
 import HeaderTab from "./components/Header/HeaderTab";
 import Footer from "./components/footer/Footer";
 
@@ -34,9 +30,9 @@ function App() {
   }
   const storageCart = JSON.parse(localStorage.getItem("listProductCart") || "");
 
-  const cart = useSelector(
-    (state: RootState) => state.reducer.cartSlice.listProductCart
-  );
+  // const cart = useSelector(
+  //   (state: RootState) => state.reducer.cartSlice.listProductCart
+  // );
   useEffect(() => {
     dispatch(handleProductsFetchRequest());
     dispatch(handleGetCategories());
@@ -57,7 +53,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:id" element={<DetailProduct />} />
-        <Route path="/orderComplete" element={<OrderComplete />} />
         <Route path="/category/:categoryName" element={<CategoryProduct />} />
       </Routes>
       <div>
